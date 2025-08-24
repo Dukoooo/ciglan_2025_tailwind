@@ -14,54 +14,58 @@ function Navigation() {
   }
 
   return (
-    <section class="w-[100%] lg:w-[80%] m-auto bg-white h-30 flex justify-between md:justify-between items-center font-[RobotoMono] ">
+    <section className="w-[100%] lg:w-[80%] m-auto bg-white h-30 flex justify-between md:justify-between items-center font-[RobotoMono]">
       <img
         src={LogoHorizontal}
         alt="company logo"
-        class="w-[250px] md:w-[260px]"
+        className="w-[250px] md:w-[300px] my-2rem md:my--1rem"
       />
       <nav
-        class={` overflow-hidden transition-[max-height] duration-500 ease-in-out
-    ${
-      isOpen ? "max-h-3/4" : "max-h-0"
-    }  absolute h-[82%] top-30 left-0 bg-black text-white w-full md:w-[65%] lg:w-[60%] md:relative  md:top-5   md:bg-transparent md:text-black `}
+        className={` overflow-hidden transition-[h] duration-500 ease-in-out
+          ${isOpen ? "h-[83%]" : "max-h-0"} md:max-h-full
+          absolute  top-30 md:left-0 xl:left-30 bg-black text-white w-full
+          md:w-[70%] lg:w-[60%] md:relative md:top-0 md:bg-transparent md:text-black`}
       >
-        <ul class="flex flex-col items-center  gap-[10vw] md:gap-[4vw] md:flex-row mt-25 md:mt-2 md:mr-[2rem] tracking-wider md:font-medium text-xl">
-          <li class="cursor-pointer hover:text-[#EDC543] transition-colors duration-300">
+        <ul className="flex flex-col items-center gap-[15vw] md:gap-[4vw] md:flex-row mt-20 md:mt-2 md:mr-[2rem] tracking-wider md:font-medium text-xl">
+          <li className="cursor-pointer hover:text-[#EDC543] transition-colors duration-300 border-b-2 pb-2 border-[#EDC543] md:border-none">
             <Link to="section1" smooth={true} duration={500} offset={50}>
               Domov
             </Link>
           </li>
-          <li class="cursor-pointer whitespace-nowrap hover:text-[#EDC543] transition-colors duration-300">
-            {" "}
+          <li className="cursor-pointer whitespace-nowrap hover:text-[#EDC543] transition-colors duration-300 pb-2 border-b-2 border-[#EDC543] md:border-none">
             <Link to="section2" smooth={true} duration={500} offset={50}>
               O nás
             </Link>
           </li>
-          <li class="cursor-pointer hover:text-[#EDC543] transition-colors duration-300">
-            {" "}
+          <li className="cursor-pointer hover:text-[#EDC543] transition-colors duration-300 border-b-2 pb-2 border-[#EDC543] md:border-none">
             <Link to="section3" smooth={true} duration={500} offset={50}>
               Služby
             </Link>
           </li>
-          <li class="cursor-pointer hover:text-[#EDC543] transition-colors duration-300">
-            {" "}
+          <li className="cursor-pointer hover:text-[#EDC543] transition-colors duration-300 border-b-2 pb-2 border-[#EDC543] md:border-none">
             <Link to="section4" smooth={true} duration={500} offset={50}>
               Galéria
             </Link>
           </li>
 
-          <span class="border-3 border-[#EDC543] pl-2 pr-4 flex justify-between items-center cursor-pointer">
-            <li class="hover:text-[#EDC543] transition-colors duration-300">
+          <span className="md:border-3 md:border-[#EDC543] pl-2 pr-4 flex justify-between items-center cursor-pointer group">
+            <li className="transition-colors duration-300 border-b-2 pb-2 border-[#EDC543] md:border-none md:py-1">
               <Link to="section5" smooth={true} duration={500} offset={50}>
                 Kontakt
               </Link>
             </li>
-            <img src={arrowSmall} alt="arrows" class="pl-2 h-[100%] " />
+            <img
+              src={arrowSmall}
+              alt="arrows"
+              className="hidden md:block pl-2 h-[100%] transform transition-transform duration-200 group-hover:translate-y-0.5"
+            />
           </span>
         </ul>
       </nav>
-      <span class="md:hidden mr-7 text-5xl cursor-pointer" onClick={handleMenu}>
+      <span
+        className="md:hidden mr-7 text-5xl cursor-pointer"
+        onClick={handleMenu}
+      >
         {isOpen ? <IoMdCloseCircle /> : <GiHamburgerMenu />}
       </span>
     </section>
