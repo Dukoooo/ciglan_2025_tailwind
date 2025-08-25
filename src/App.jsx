@@ -8,12 +8,16 @@ import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/600.css";
 
-import Navigation from "./components/Navigation";
+import "@fontsource/space-mono";
+import Navigation from "./components/layout/Navigation";
+import { RouterProvider } from "react-router-dom";
+import { router } from "../router";
 
 function App() {
   return (
     <>
       <Navigation />
+      <RouterProvider router={router} />
     </>
   );
 }

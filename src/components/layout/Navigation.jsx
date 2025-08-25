@@ -2,8 +2,8 @@ import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdCloseCircle } from "react-icons/io";
 
-import LogoHorizontal from "../assets/ciglan_logo_horizontal_transparent.png";
-import arrowSmall from "../assets/arrows__Small.png";
+import LogoHorizontal from "../../assets/ciglan_logo_horizontal_transparent.png";
+import arrowSmall from "../../assets/arrows__Small.png";
 import { useState } from "react";
 
 function Navigation() {
@@ -14,19 +14,19 @@ function Navigation() {
   }
 
   return (
-    <section className="w-[100%] lg:w-[80%] m-auto bg-white h-30 flex justify-between md:justify-between items-center font-[RobotoMono]">
+    <section className="w-[100%]  lg:w-[80%] m-auto bg-white h-30 flex justify-between md:justify-between items-center font-[Roboto_Mono] 2xl:w-[1300px]">
       <img
         src={LogoHorizontal}
         alt="company logo"
-        className="w-[250px] md:w-[300px] my-2rem md:my--1rem"
+        className="w-[250px] md:w-[260px] lg:w-[300px] my-2rem md:my--1rem"
       />
       <nav
-        className={` overflow-hidden transition-[h] duration-500 ease-in-out
-          ${isOpen ? "h-[83%]" : "max-h-0"} md:max-h-full
-          absolute  top-30 md:left-0 xl:left-30 bg-black text-white w-full
+        className={` z-50 overflow-hidden transition-[height] duration-500 ease-in-out
+          ${isOpen ? "h-[83%]" : "h-0"} md:h-auto
+          absolute  top-30 md:left-0 xl:left-30 bg-black text-white w-full 
           md:w-[70%] lg:w-[60%] md:relative md:top-0 md:bg-transparent md:text-black`}
       >
-        <ul className="flex flex-col items-center gap-[15vw] md:gap-[4vw] md:flex-row mt-20 md:mt-2 md:mr-[2rem] tracking-wider md:font-medium text-xl">
+        <ul className="flex flex-col items-center gap-[15vw] md:gap-[4vw] md:flex-row mt-20 md:mt-2 md:mr-[2rem] tracking-wider md:font-medium text-l">
           <li className="cursor-pointer hover:text-[#EDC543] transition-colors duration-300 border-b-2 pb-2 border-[#EDC543] md:border-none">
             <Link to="section1" smooth={true} duration={500} offset={50}>
               Domov
