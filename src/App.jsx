@@ -16,7 +16,6 @@ import { router } from "../router";
 function App() {
   return (
     <>
-      <Navigation />
       <RouterProvider router={router} />
     </>
   );

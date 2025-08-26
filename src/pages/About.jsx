@@ -1,9 +1,11 @@
 import foto1 from "../assets/img-about1.JPG";
-
+import { Link } from "react-router-dom";
 function About() {
   return (
     <section className="min-h-[60vh] w-[87%] mx-auto mt-[7rem] mb-[7rem] md:mt-[10rem] lg:w-[60%] 2xl:w-[1300px]">
       <main className=" border-l-8 border-amber-300 pl-4">
+        <Link to="/homePage">Spat na domovsku stranku</Link>
+
         <h2 className="font-black text-2xl pb-4 md:text-center md:text-3xl md:mb-6">
           Spoločnosť Ciglan s.r.o.
         </h2>

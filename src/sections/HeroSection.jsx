@@ -4,6 +4,7 @@ import tripleArrow from "../assets/arrow_triple_big.png";
 function HeroSection() {
   return (
     <section
+      id="hero"
       className="flex relative flex-col w-full h-[65vh]  md:h-[70vh] lg:h-[80vh]  bg-cover bg-center "
       style={{ backgroundImage: `url(${background})` }}
     >
