@@ -9,7 +9,6 @@ import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/600.css";
 
 import "@fontsource/space-mono";
-import Navigation from "./components/layout/Navigation";
 import { RouterProvider } from "react-router-dom";
 import { router } from "../router";
 
