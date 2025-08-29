@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import foto1 from "../assets/img-about1.JPG";
 import foto2 from "../assets/img-about2.JPG";
 import foto3 from "../assets/img-about3.JPG";
+import trippleBlack from "../assets/tripple_black.png";
 import returnBtn from "../assets/return.png";
 import SliderSmall from "../components/UI/SliderSmall";
+import { LuMessageCircleMore } from "react-icons/lu";
+
 import { Link } from "react-router-dom";
 
 const photosArr = [
@@ -38,11 +41,11 @@ function About() {
 
   return (
     <>
-      <section className="min-h-[60vh] w-[87%] lg:w-[90%] mx-auto mt-[7rem] mb-[7rem] md:mt-[10rem]  2xl:w-[1300px]">
+      <section className="min-h-[60vh] w-[87%] lg:w-[90%] mx-auto mt-[7rem] mb-[7rem] md:mt-[5rem]  2xl:w-[1300px] 2xl:items-center  ">
         {windowWidth >= 768 ? (
-          <main className="border-l-8 border-amber-300 pl-4 flex flex-col xl:flex-row gap-6 mx-auto">
-            <div className="md:w-full  mx-auto lg:w-3/5">
-              <div className="mb-8">
+          <main className="border-l-8 border-amber-300 pl-4 flex flex-col xl:flex-row gap-6 mx-auto md:min-h-[80vh]  2xl:items-center 2xl:min-h-[80%] 2xl:justify-center 2xl:pb-[15vh] xl:pt-[10vh] 2xl:pt-0">
+            <div className="md:w-full  mx-auto lg:w-3/5 ">
+              <div className="mb-8 2xl:mb-[30%] relative xl:top-[-40px] 2xl:top-10 transform hover:scale-101 duration-300 ">
                 <Link
                   to="/homePage"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-amber-300 text-black font-bold rounded-lg shadow hover:bg-amber-400 transition-colors duration-300"
@@ -73,7 +76,7 @@ function About() {
               </p>
             </div>
 
-            <div className="md:w-[78%] lg:w-2/5 relative flex justify-center items-start mt-6 md:mt-15 mx-auto">
+            <div className="md:w-[78%] lg:w-2/5 relative flex justify-center items-start mt-6 md:mt-15 mx-auto 2xl:w-[60%] 2xl:mt-0 xl:top-20 2xl:top-5">
               <img
                 src={foto2}
                 alt=""
@@ -92,13 +95,13 @@ function About() {
             </div>
           </main>
         ) : (
-          <main className=" border-l-8 border-amber-300 pl-4">
+          <main className=" border-l-8 border-amber-300 pl-4 ">
             <div className="mb-6">
               <Link
                 to="/homePage"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-amber-300 text-black font-bold rounded-lg shadow hover:bg-amber-400 transition-colors duration-300"
               >
-                <img src={returnBtn} alt="return button" className="w-6 h-6" />
+                <img src={returnBtn} alt="return button" className="w-6 h-6 " />
                 Späť na domovskú stránku
               </Link>
             </div>
@@ -120,13 +123,18 @@ function About() {
         )}
         {windowWidth < 768 && <SliderSmall photos={photosArr} />}
       </section>
-      <div className="flex flex-col items-center justify-center min-h-[30vh] w-[100%] bg-amber-400">
-        <div className="w-[80%] mx-auto">
-          <h2 className="text-5xl font-black uppercase text-transparent tracking-widest text-stroke-1 ">
-            Pripraveny odstartovat svoj novy{" "}
-            <span className="text-zinc-950">projekt</span> ?
+      <div className="  flex flex-col items-center justify-center min-h-[30vh] md:min-h-[40vh] w-[100%] bg-amber-400 mx-auto   ">
+        <div className="w-[100%] mx-2 text-center mt-10 md:w-[95%] xl:w-[80%] 2xl:max-w-[60%] transform hover:scale-105 duration-350">
+          <div className="relative top-[-75px] left-[46%] ">
+            <img src={trippleBlack} alt="" className="w-20 " />
+          </div>
+          <h2 className="text-3xl md:text-[3rem]  md:tracking-normal font-black font-mono uppercase text-transparent tracking-widest text-stroke-1 2xl:text-[4rem]  ">
+            Pripravený odštartovať svôj nový
+            <span className="text-zinc-950"> projekt </span>?
           </h2>
-          <span>Kontaktujte nas </span>
+          <span className="flex items-center gap-1 md:text-xl md:px-3 md:py-1 md:mt-7 tracking-wider font-black text-center justify-center mt-5 text-stone-900 border-2 w-fit mx-auto px-2 border-amber-50 cursor-pointer  mb-5">
+            Kontaktujte nás <LuMessageCircleMore className="text-amber-50" />
+          </span>
         </div>
       </div>
     </>
