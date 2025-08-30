@@ -8,6 +8,8 @@ import SliderSmall from "../components/UI/SliderSmall";
 import { LuMessageCircleMore } from "react-icons/lu";
 
 import { Link } from "react-router-dom";
+import Footer from "../components/layout/Footer";
+import SubFooter from "../components/layout/SubFooter";
 
 const photosArr = [
   {
@@ -125,7 +127,7 @@ function About() {
       </section>
       <div className="  flex flex-col items-center justify-center min-h-[30vh] md:min-h-[40vh] w-[100%] bg-amber-400 mx-auto   ">
         <div className="w-[100%] mx-2 text-center mt-10 md:w-[95%] xl:w-[80%] 2xl:max-w-[60%] transform hover:scale-105 duration-350">
-          <div className="relative top-[-75px] left-[46%] ">
+          <div className="relative top-[-70px] left-[41%] w-fit md:top-[-95px] md:left-[45%] 2xl:top-[-80px]">
             <img src={trippleBlack} alt="" className="w-20 " />
           </div>
           <h2 className="text-3xl md:text-[3rem]  md:tracking-normal font-black font-mono uppercase text-transparent tracking-widest text-stroke-1 2xl:text-[4rem]  ">
@@ -137,6 +139,8 @@ function About() {
           </span>
         </div>
       </div>
+      <Footer />
+      <SubFooter />
     </>
   );
 }
