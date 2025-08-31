@@ -1,3 +1,7 @@
+import img1 from "../assets/zemne_section.jpg";
+import img2 from "../assets/stavebne_section.jpg";
+import img3 from "../assets/zahradne_section.jpg";
+
 const servicesData = [
   {
     id: 1,
@@ -11,6 +15,7 @@ const servicesData = [
       "Prípojky inžinierskych sietí",
       "A iné...",
     ],
+    img: img1,
   },
   {
     id: 2,
@@ -23,6 +28,7 @@ const servicesData = [
       "Búranie a demolácia",
       "A iné...",
     ],
+    img: img2,
   },
   {
     id: 3,
@@ -36,6 +42,7 @@ const servicesData = [
       "Pokládka zámkovej dlažby",
       "A iné...",
     ],
+    img: img3,
   },
 ];
 
