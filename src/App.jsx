@@ -9,14 +9,22 @@ import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/600.css";
 
 import "@fontsource/space-mono";
-import { RouterProvider } from "react-router-dom";
-import { router } from "../router";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import About from "./pages/About";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/homePage" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

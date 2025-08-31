@@ -46,7 +46,7 @@ function Navigation() {
               to="about"
               smooth={true}
               duration={500}
-              offset={50}
+              offset={-100}
               onClick={() => handleCloseMenu()}
             >
               O nás
@@ -54,10 +54,10 @@ function Navigation() {
           </li>
           <li className="cursor-pointer hover:text-[#EDC543] transition-colors duration-300 border-b-2 pb-2 border-[#EDC543] md:border-none">
             <Link
-              to="section3"
+              to="services"
               smooth={true}
               duration={500}
-              offset={50}
+              offset={-250}
               onClick={() => handleCloseMenu()}
             >
               Služby
