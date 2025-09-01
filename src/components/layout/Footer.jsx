@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="h-[20vh] bg-neutral-800 w-screen text-amber-50 flex  mx-auto ">
+    <footer className="h-[30vh] bg-neutral-800 w-screen text-amber-50 flex  mx-auto ">
       <div className="py-7 mx-auto w-[85%] xl:max-w-[500px] md:w-[50%]  my-auto md:pl-18 justify-center items-center pl-10 xl:pl-32 ">
         <ul className="flex flex-col items-start gap-2 tracking-wider text-left ">
           <li className="flex items-center gap-3 tracking-wider">
