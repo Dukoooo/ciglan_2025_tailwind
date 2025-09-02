@@ -8,10 +8,7 @@ function Footer() {
             <span className="block h-[1px] w-[6rem] bg-amber-400 "></span>
           </li>
           <li className="text-l">
-            Konateľ:{" "}
-            <span href="" className="text-white font-black">
-              Lukáš Ciglan
-            </span>
+            Konateľ: <span className="text-white font-black">Lukáš Ciglan</span>
           </li>
           <li className="text-l">
             Mobil:{" "}

@@ -1,19 +1,18 @@
 import img1 from "../assets/zemne_section.jpg";
 import img2 from "../assets/stavebne_section.jpg";
 import img3 from "../assets/zahradne_section.jpg";
-
 const servicesData = [
   {
     id: 1,
     serviceName: "Zemné a výkopové práce",
     serviceDesc:
-      "Zemné a výkopové práce zahŕňajú rôzne činnosti súvisiace s úpravou a prípravou terénu pre rôzne druhy projektov",
+      "Naše zemné a výkopové práce zahŕňajú komplexnú prípravu a úpravu terénu pre všetky typy projektov – od rodinných domov až po väčšie stavby či záhrady.",
     serviceFeatures: [
-      "Výkopy základov, drenážných jám, pivníc, bazénov, jazierok...",
-      "Dovoz a predaj sypkých materiálov",
-      "Príprava povrchu pre výstavbu ciest, parkovísk a chodníkov...",
-      "Prípojky inžinierskych sietí",
-      "A iné...",
+      "Výkopy základov, drenážnych jám, pivníc, bazénov a jazierok",
+      "Dovoz a predaj kvalitných sypkých materiálov",
+      "Príprava povrchov pre výstavbu ciest, parkovísk a chodníkov",
+      "Realizácia prípojok inžinierskych sietí",
+      "A mnoho ďalších špecifických prác podľa potreby",
     ],
     img: img1,
   },
@@ -21,12 +20,13 @@ const servicesData = [
     id: 2,
     serviceName: "Stavebná činnosť",
     serviceDesc:
-      "Stavebná činnosť je činnosť, ktorá zahŕňa stavbu konštrukcie, renovácie a údržby rôznych typov stavieb, ako sú budovy, mosty, cesty...",
+      "Poskytujeme komplexné stavebné služby vrátane stavby, renovácie a údržby rôznych typov objektov – od rodinných domov až po komerčné stavby a infraštruktúru.",
     serviceFeatures: [
       "Príprava stavebných miest a úprava terénu",
-      "Odvoz a likvidácia stavebnej sute a odpadu",
-      "Búranie a demolácia",
-      "A iné...",
+      "Odvoz a ekologická likvidácia stavebného odpadu",
+      "Búranie, demolácia a recyklácia materiálov",
+      "Presná a kvalitná realizácia stavieb podľa projektu",
+      "A mnoho ďalších stavebných prác",
     ],
     img: img2,
   },
@@ -34,13 +34,13 @@ const servicesData = [
     id: 3,
     serviceName: "Záhradná činnosť a iné",
     serviceDesc:
-      "komplexné riešenia pre úpravu a údržbu záhrad, verejných priestranstiev a zelených plôch",
+      "Ponúkame komplexné riešenia pre úpravu a údržbu záhrad, verejných priestranstiev a zelených plôch, aby vaše okolie pôsobilo upravene a esteticky.",
     serviceFeatures: [
-      "Úprava terénov a záhrad ",
-      "Stavba terás, altánkov a plotov ",
-      "Rovnanie svahov, kaskádovanie pozemku...",
-      "Pokládka zámkovej dlažby",
-      "A iné...",
+      "Úprava terénov a dizajn záhradnych plôch",
+      "Stavba terás, altánkov, plotov a iných záhradných prvkov",
+      "Rovnanie svahov a kaskádovanie pozemku",
+      "Pokládka zámkovej dlažby a chodníkov",
+      "A množstvo ďalších služieb na mieru",
     ],
     img: img3,
   },

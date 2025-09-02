@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/layout/Footer";
 import SubFooter from "../components/layout/SubFooter";
 import Baner from "../components/Baner";
-
+import Navigation from "../components/layout/Navigation";
 
 const photosArr = [
   {
@@ -43,24 +43,11 @@ function About() {
 
   return (
     <>
-      <section className="min-h-[60vh] w-[87%] lg:w-[90%] mx-auto mt-[7rem] mb-[7rem] md:mt-[5rem]  2xl:w-[1300px] 2xl:items-center  ">
+      <Navigation />
+      <section className="min-h-[60vh] w-[87%] lg:w-[90%] mx-auto mt-[2rem] mb-[7rem] md:mt-[5rem]  2xl:w-[1300px] 2xl:items-center  ">
         {windowWidth >= 768 ? (
           <main className="border-l-8 border-amber-300 pl-4 flex flex-col xl:flex-row gap-6 mx-auto md:min-h-[80vh]  2xl:items-center 2xl:min-h-[80%] 2xl:justify-center 2xl:pb-[15vh] xl:pt-[10vh] 2xl:pt-0">
             <div className="md:w-full  mx-auto lg:w-3/5 ">
-              <div className="mb-8 2xl:mb-[30%] relative xl:top-[-40px] 2xl:top-10 transform hover:scale-101 duration-300 ">
-                <Link
-                  to="/homePage"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-amber-300 text-black font-bold rounded-lg shadow hover:bg-amber-400 transition-colors duration-300"
-                >
-                  <img
-                    src={returnBtn}
-                    alt="return button"
-                    className="w-6 h-6"
-                  />
-                  Späť na domovskú stránku
-                </Link>
-              </div>
-
               <h2 className="font-black text-2xl pb-4 md:text-center md:text-3xl md:mb-6">
                 Spoločnosť Ciglan s.r.o.
               </h2>
@@ -78,7 +65,7 @@ function About() {
               </p>
             </div>
 
-            <div className="md:w-[78%] lg:w-2/5 relative flex justify-center items-start mt-6 md:mt-15 mx-auto 2xl:w-[60%] 2xl:mt-0 xl:top-20 2xl:top-5">
+            <div className="md:w-[78%] lg:w-2/5 relative flex justify-center items-start mt-6 md:mt-15 mx-auto 2xl:w-[60%] 2xl:mt-0 xl:top-[-100px] 2xl:top-[-100px]">
               <img
                 src={foto2}
                 alt=""
@@ -98,16 +85,7 @@ function About() {
           </main>
         ) : (
           <main className=" border-l-8 border-amber-300 pl-4 ">
-            <div className="mb-6">
-              <Link
-                to="/homePage"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-amber-300 text-black font-bold rounded-lg shadow hover:bg-amber-400 transition-colors duration-300"
-              >
-                <img src={returnBtn} alt="return button" className="w-6 h-6 " />
-                Späť na domovskú stránku
-              </Link>
-            </div>
-            <h2 className="font-black text-2xl pb-4 md:text-center md:text-3xl md:mb-6">
+            <h2 className="font-black text-2xl pb-10 md:text-center md:text-3xl md:mb-6">
               Spoločnosť Ciglan s.r.o.
             </h2>
             <p className="font-[Space_Mono]">
