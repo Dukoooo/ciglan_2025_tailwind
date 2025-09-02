@@ -35,16 +35,6 @@ function ServiceItem({
           onClick={() => onHandleModal(true)}
         />
       </span>
-      {modalState ? (
-        <div className="w-full h-[100vh] ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-          nemo voluptatibus atque voluptates excepturi ipsum eaque quidem
-          facilis, ducimus illo explicabo eveniet a voluptas quod aut assumenda
-          fugiat id provident.
-        </div>
-      ) : (
-        ""
-      )}
     </div>
   );
 }
