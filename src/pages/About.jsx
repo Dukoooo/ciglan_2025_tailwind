@@ -10,6 +10,7 @@ import Footer from "../components/layout/Footer";
 import SubFooter from "../components/layout/SubFooter";
 import Baner from "../components/Baner";
 import Navigation from "../components/layout/Navigation";
+import ScrollToTop from "../utils/ScrollToTop";
 
 const photosArr = [
   {
@@ -43,6 +44,7 @@ function About() {
 
   return (
     <>
+      <ScrollToTop />
       <Navigation />
       <section className="min-h-[60vh] w-[87%] lg:w-[90%] mx-auto mt-[2rem] mb-[7rem] md:mt-[5rem]  2xl:w-[1300px] 2xl:items-center  ">
         {windowWidth >= 768 ? (

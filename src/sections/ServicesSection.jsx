@@ -1,14 +1,7 @@
-import { useState } from "react";
 import ServiceItem from "../components/UI/ServiceItem";
 import servicesData from "../data/servicesData";
 
 function ServicesSection() {
-  const [isModalOpen, setIsMOdalOpen] = useState(false);
-
-  function handleModal(decision) {
-    setIsMOdalOpen(decision);
-  }
-
   return (
     <section
       className="min-h-[100vh] w-[87%] mx-auto mt-[7rem] mb-[7rem] md:mt-[10rem] lg:w-[80%] 2xl:w-[1300px]"
@@ -27,8 +20,6 @@ function ServicesSection() {
               text={data.serviceDesc}
               features={data.serviceFeatures}
               img={data.img}
-              onHandleModal={handleModal}
-              modalState={isModalOpen}
             />
           ))}
         </div>

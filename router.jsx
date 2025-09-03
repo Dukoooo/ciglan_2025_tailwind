@@ -8,7 +8,7 @@ export const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
   { path: "/homePage", element: <HomePage /> },
   { path: "/about", element: <About /> },
-  { path: "/services", element: <Services /> },
+  { path: "/services/:serviceId", element: <Services /> },
 ]);
 
 export default router;

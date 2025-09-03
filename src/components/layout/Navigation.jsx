@@ -18,11 +18,17 @@ function Navigation() {
 
   return (
     <section className="w-[100%]   lg:w-[80%] m-auto bg-white h-30 flex justify-between md:justify-between items-center font-[Roboto_Mono] 2xl:w-[1300px]">
-      <img
-        src={LogoHorizontal}
-        alt="company logo"
-        className="w-[250px] md:w-[260px] lg:w-[300px] my-2rem md:my--1rem"
-      />
+      <div>
+        <Link to="/" className="cursor-pointer">
+          {" "}
+          <img
+            src={LogoHorizontal}
+            alt="company logo"
+            className="w-[250px] md:w-[260px] lg:w-[300px] my-2rem md:my--1rem"
+          />
+        </Link>
+      </div>
+
       <nav
         className={`z-50 overflow-hidden transition-[height] duration-500 ease-in-out
           ${isOpen ? "h-[83%]" : "h-0"} md:h-auto

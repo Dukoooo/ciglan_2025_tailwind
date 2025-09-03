@@ -1,4 +1,5 @@
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function ServiceItem({
   id,
@@ -30,10 +31,9 @@ function ServiceItem({
       </div>
 
       <span className="absolute right-[-15px] bottom-[-20px] z-30 bg-white w-20 h-20 flex items-center justify-center rounded-full ">
-        <BsArrowUpRightCircleFill
-          className="text-4xl hover:text-amber-400 hover:scale-110 duration-300 cursor-pointer"
-          onClick={() => onHandleModal(true)}
-        />
+        <Link to={`/services/${id}`}>
+          <BsArrowUpRightCircleFill className="text-4xl hover:text-amber-400 hover:scale-110 duration-300 cursor-pointer" />
+        </Link>
       </span>
     </div>
   );

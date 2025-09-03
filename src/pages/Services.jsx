@@ -1,39 +1,54 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "../components/layout/Navigation";
 import Footer from "../components/layout/Footer";
 import SubFooter from "../components/layout/SubFooter";
 import servicesData from "../data/servicesData";
+import Baner from "../components/Baner";
+import imgServ from "../assets/gal-6.jpg";
+import ScrollToTop from "../utils/ScrollToTop";
+import { useParams } from "react-router-dom";
 
 function Services() {
   const [currentItemID, setCurrentItemID] = useState(servicesData[0].id);
-  const activService = servicesData.find((item) => item.id === currentItemID);
+  
+  const activService = servicesData.find(
+    (item) => String(item.id) === String(currentItemID)
+  );
+  const { serviceId } = useParams();
+
+  useEffect(() => {
+    if (serviceId) {
+      setCurrentItemID(serviceId);
+    }
+  }, [serviceId]);
 
   return (
     <>
+      <ScrollToTop />
       <Navigation />
-      <section>
+      <section className="flex flex-col items-center 2xl:max-w-[1300px] mx-auto">
         <header className="text-center mt-3">
           <h3 className="text-4xl font-black tracking-wide font-[Roboto_Mono]">
             Naše služby
           </h3>
         </header>
+        <ul className="flex mx-auto px-5 mt-16 flex-wrap gap-5 font-mono font-bold text-[0.8rem] md:text-[0.9rem] items-center justify-center">
+          {servicesData.map((item) => {
+            const isActiv = item.id === activService.id;
+            return (
+              <li
+                key={item.id}
+                className={`${isActiv ? "underline" : ""} cursor-pointer p-1`}
+                onClick={() => setCurrentItemID(item.id)}
+              >
+                {item.serviceName}
+              </li>
+            );
+          })}
+        </ul>
 
-        <main>
-          <ul className="flex mx-auto px-5 mt-16 flex-wrap gap-5 font-mono font-bold text-[0.9rem]  items-center justify-center">
-            {servicesData.map((item) => {
-              const isActiv = item.id === activService.id;
-              return (
-                <li
-                  key={item.id}
-                  className={`${isActiv ? "underline" : ""} cursor-pointer`}
-                  onClick={() => setCurrentItemID(item.id)}
-                >
-                  {item.serviceName}
-                </li>
-              );
-            })}
-          </ul>
-          <div className="flex items-center flex-col justify-center mt-[3rem] mx-auto w-[85%]">
+        <main className="flex flex-col xl:flex-row">
+          <div className="flex items-center flex-col justify-center mt-[3rem] mx-auto w-[85%] xl:relative xl:top-[-60px] xl:pl-10 ">
             <h2 className="text-[1.5rem] font-semibold font-[Roboto_Mono] pb-6">
               {activService.serviceName}
             </h2>
@@ -51,8 +66,16 @@ function Services() {
               })}
             </ul>
           </div>
+          <div className="w-[70%] mx-auto py-8 mb-10 relative">
+            <img
+              src={imgServ}
+              alt="komatsu"
+              className="w-[80%] mx-auto md:w-[50%] xl:w-[50%] xl:my-7"
+            />
+          </div>
         </main>
       </section>
+      <Baner />
       <Footer />
       <SubFooter />
     </>
