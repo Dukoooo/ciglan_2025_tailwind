@@ -54,7 +54,7 @@ function Navigation() {
 
           <span className="md:border-3 md:border-[#EDC543] pl-2 pr-4 flex justify-between items-center cursor-pointer group">
             <li className="transition-colors duration-300 border-b-2 pb-2 border-[#EDC543] md:border-none md:py-1">
-              <Link>Kontakt</Link>
+              <Link to='/contact'>Kontakt</Link>
             </li>
             <img
               src={arrowSmall}
