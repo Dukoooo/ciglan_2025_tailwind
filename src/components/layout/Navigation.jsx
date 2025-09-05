@@ -33,7 +33,7 @@ function Navigation() {
         className={`z-50 overflow-hidden transition-[height] duration-500 ease-in-out
           ${isOpen ? "h-[83%]" : "h-0"} md:h-auto
           absolute  top-30 md:left-0 xl:left-30 bg-black text-white w-full 
-          md:w-[70%] lg:w-[60%] md:relative md:top-0 md:bg-transparent md:text-black font-[Roboto_Mono]`}
+          md:w-[70%] lg:w-[60%] md:relative md:top-0 md:bg-transparent md:text-black font-[Roboto_Mono] `}
       >
         <ul className="flex flex-col items-center gap-[15vw] md:gap-[4vw] md:flex-row mt-20 md:mt-2 md:mr-[2rem] tracking-wider md:font-medium text-l">
           <li
@@ -54,7 +54,7 @@ function Navigation() {
 
           <span className="md:border-3 md:border-[#EDC543] pl-2 pr-4 flex justify-between items-center cursor-pointer group">
             <li className="transition-colors duration-300 border-b-2 pb-2 border-[#EDC543] md:border-none md:py-1">
-              <Link to='/contact'>Kontakt</Link>
+              <Link to="/contact">Kontakt</Link>
             </li>
             <img
               src={arrowSmall}

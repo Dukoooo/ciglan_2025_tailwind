@@ -6,6 +6,7 @@ import Footer from "../components/layout/Footer";
 import SubFooter from "../components/layout/SubFooter";
 import background2 from "../assets/background_2.jpg";
 import arrows from "../assets/arrow_triple_big.png";
+import mapa from "../assets/mapa_ciglan.png";
 function FormPage() {
   const form = useRef();
   const sendEmail = (e) => {
@@ -47,7 +48,7 @@ function FormPage() {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col gap-4 w-[90%] my-10 max-w-md  p-8  "
+          className="flex flex-col gap-4 w-[100%] my-10   p-8  "
         >
           <h2 className="text-[0.9rem] font-semibold text-center text-gray-800 mb-4 font-[Roboto_Mono]">
             Poďme na to.
@@ -98,6 +99,22 @@ function FormPage() {
             Odoslať
           </button>
         </form>
+        <div className="p-4 mb-10 w-[80%]  mx-auto flex flex-col items-start ">
+          <div className="pb-6">
+            <h3 className="font-bold text-xl  md:text-2xl font-mono tracking-wider pb-2">
+              Kde nás nájdete?
+            </h3>
+            <div className="font-sanserif text-[0.9rem]">
+              <p className="before:content-['📍'] before:mr-1 pb-1">
+                Michalská 687/8
+              </p>
+              <p className="pl-5"> 969 01 Banská Štiavnica</p>
+            </div>
+          </div>
+          <div>
+            <img src={mapa} alt="mapa" className="h-[11em]" />
+          </div>
+        </div>
       </section>
 
       <Footer />
