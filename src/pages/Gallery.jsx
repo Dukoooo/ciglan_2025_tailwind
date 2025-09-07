@@ -13,8 +13,9 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/counter.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-
+import { motion } from "motion/react";
 import { photosArrLong } from "../data/picturesData";
+
 import {
   Captions,
   Download,
@@ -29,25 +30,39 @@ function Gallery() {
     <>
       <ScrollToTop />
       <Navigation />
-      <section className="w-screen mx-auto items-center justify-center flex flex-col mb-[5rem]">
-        <PicturesLay
-          photos={photosArrLong}
-          onClick={(currentIndex) => setIndex(currentIndex)}
-        />
 
-        <Lightbox
-          index={index}
-          open={index >= 0}
-          close={() => setIndex(-1)}
-          slides={photosArrLong}
-          plugins={[Captions, Counter, Download, Fullscreen, Zoom, Thumbnails]}
-          counter={{ container: { style: { top: "unset", bottom: 0 } } }}
-          captions={{
-            showToggle: true,
-            descriptionTextAlign: "end",
-          }}
-        />
-      </section>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, repeat: false }}
+      >
+        <section className="w-screen mx-auto items-center justify-center flex flex-col mb-[5rem]">
+          <PicturesLay
+            photos={photosArrLong}
+            onClick={(currentIndex) => setIndex(currentIndex)}
+          />
+
+          <Lightbox
+            index={index}
+            open={index >= 0}
+            close={() => setIndex(-1)}
+            slides={photosArrLong}
+            plugins={[
+              Captions,
+              Counter,
+              Download,
+              Fullscreen,
+              Zoom,
+              Thumbnails,
+            ]}
+            counter={{ container: { style: { top: "unset", bottom: 0 } } }}
+            captions={{
+              showToggle: true,
+              descriptionTextAlign: "end",
+            }}
+          />
+        </section>
+      </motion.div>
       <Baner />
       <Footer />
       <SubFooter />

@@ -2,6 +2,7 @@ function PicturesLay({ photos, onClick }) {
   function handleClick(index) {
     onClick(index);
   }
+  
   return (
     <div className="w-screen h-auto xl:max-w-[1200px]">
       <div className="grid w-[90%] mx-auto mt-10 grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] px-5 gap-4">

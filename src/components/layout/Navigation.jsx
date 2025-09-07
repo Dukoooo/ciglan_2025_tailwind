@@ -17,7 +17,7 @@ function Navigation() {
   }
 
   return (
-    <section className="w-[100%]   lg:w-[80%] m-auto bg-white h-30 flex justify-between md:justify-between items-center font-[Roboto_Mono] 2xl:w-[1300px]">
+    <section className="w-screen   lg:w-[80%] m-auto bg-white h-30 flex justify-between md:justify-between items-center font-[Roboto_Mono] ">
       <div>
         <Link to="/" className="cursor-pointer">
           {" "}
