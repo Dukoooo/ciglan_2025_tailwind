@@ -8,12 +8,13 @@ function ButtonSmall({
   href,
   imgSrc = arrows_small,
   imgClassName = defaultArrowClass,
+  color = "black",
 }) {
   return (
     <a
       target="blank"
       href={href}
-      className="group pl-0 flex flex-row gap-1 items-center font-bold hover:underline"
+      className={`group pl-0 flex flex-row gap-1 items-center font-bold hover:underline text-${color} cursor-pointer `}
     >
       {children}
       <img src={imgSrc} alt="arrow" className={imgClassName} />

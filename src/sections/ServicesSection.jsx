@@ -4,7 +4,7 @@ import servicesData from "../data/servicesData";
 function ServicesSection() {
   return (
     <section
-      className="min-h-[100vh] w-[87%] mx-auto mt-[7rem] mb-[7rem] md:mt-[10rem] lg:w-[80%] 2xl:w-[1300px]"
+      className="min-h-[100vh] w-[87%] mx-auto  mb-[8rem]  md:mt-[10rem] lg:w-[80%] 2xl:w-[1300px]"
       id="services"
     >
       <div className="">

@@ -3,7 +3,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 function SliderSmall({ photos }) {
   const [index, setIndex] = useState(0);
-  const { photo, alt, text } = photos[index];
+  const { src, title, description } = photos[index];
 
   function prevSlide() {
     setIndex((prev) => (prev === 0 ? photos.length - 1 : prev - 1));
@@ -24,21 +24,21 @@ function SliderSmall({ photos }) {
   return (
     <div className="mt-8 flex justify-center">
       <figure className="relative max-w-lg w-full rounded-2xl overflow-hidden shadow-2xl">
-        <img src={photo} alt={alt} className="w-full h-[16rem] object-cover" />
+        <img src={src} alt={title} className="w-full h-[16rem] object-cover" />
 
         <figcaption className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4 text-center text-white text-sm italic pb-6 text-[1em]">
-          {text}
+          {description}
         </figcaption>
 
         <button
           onClick={prevSlide}
-          className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 p-3 rounded-full text-white text-xl transition"
+          className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 p-3 rounded-full text-white text-xl transition cursor-pointer"
         >
           <FaChevronLeft />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 p-3 rounded-full text-white text-xl transition"
+          className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 p-3 rounded-full text-white text-xl transition cursor-pointer"
         >
           <FaChevronRight />
         </button>
