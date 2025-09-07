@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import trippleBlack from "../assets/tripple_black.png";
 import { LuMessageCircleMore } from "react-icons/lu";
 
@@ -13,7 +14,8 @@ function Baner() {
           <span className="text-zinc-950"> projekt </span>?
         </h2>
         <span className="flex items-center gap-1 md:text-xl md:px-3 md:py-1 md:mt-7 tracking-wider font-black text-center justify-center mt-5 text-stone-900 border-2 w-fit mx-auto px-2 border-amber-50 cursor-pointer  mb-5">
-          Kontaktujte nás <LuMessageCircleMore className="text-amber-50" />
+          <Link to="/contact">Kontaktujte nás</Link>{" "}
+          <LuMessageCircleMore className="text-amber-50" />
         </span>
       </div>
     </div>

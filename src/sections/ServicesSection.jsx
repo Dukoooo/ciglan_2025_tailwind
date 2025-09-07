@@ -8,7 +8,7 @@ function ServicesSection() {
       id="services"
     >
       <div className="">
-        <h2 className="text-[2rem] mb-[5rem] md:text-[3rem]  md:tracking-normal font-black uppercase  2xl:text-[3.5rem] font-roboto lg:text-left text-center  ">
+        <h2 className="text-[2rem] mb-[5rem] md:text-[3rem]  md:tracking-normal font-black uppercase  2xl:text-[3.5rem] font-roboto  text-center  ">
           Naše služby
         </h2>
         <div className="flex flex-wrap justify-center gap-10">

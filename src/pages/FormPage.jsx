@@ -7,7 +7,6 @@ import SubFooter from "../components/layout/SubFooter";
 import background2 from "../assets/background_2.jpg";
 import arrows from "../assets/arrow_triple_big.png";
 import mapa from "../assets/mapa_ciglan.png";
-import arrows_small from "../assets/arrows__small.png";
 import ButtonSmall from "../components/Buttons/ButtonSmall";
 import AppNotification from "../components/UI/AppNotification";
 
@@ -187,13 +186,16 @@ function FormPage() {
                     Michalská 687/8
                   </p>
                   <p className="pl-5"> 969 01 Banská Štiavnica</p>
-                  <ButtonSmall
-                    href={
-                      "https://www.google.com/maps/place/Michalsk%C3%A1+687%2F8,+969+01+Bansk%C3%A1+%C5%A0tiavnica,+Slovensko/@48.466024,18.8969211,690m/data=!3m2!1e3!4b1!4m6!3m5!1s0x471532dc5ab610f1:0x573c75f661343a38!8m2!3d48.466024!4d18.899496!16s%2Fg%2F11cpp414f9?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D"
-                    }
-                  >
-                    Prejdite na mapu
-                  </ButtonSmall>
+                  <div className="pl-5">
+                    {" "}
+                    <ButtonSmall
+                      href={
+                        "https://www.google.com/maps/place/Michalsk%C3%A1+687%2F8,+969+01+Bansk%C3%A1+%C5%A0tiavnica,+Slovensko/@48.466024,18.8969211,690m/data=!3m2!1e3!4b1!4m6!3m5!1s0x471532dc5ab610f1:0x573c75f661343a38!8m2!3d48.466024!4d18.899496!16s%2Fg%2F11cpp414f9?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D"
+                      }
+                    >
+                      Prejdite na mapu
+                    </ButtonSmall>
+                  </div>
                 </div>
               </div>
               <div>

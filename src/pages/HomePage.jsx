@@ -5,6 +5,7 @@ import AboutSection from "../sections/AboutSection";
 import ServicesSection from "../sections/ServicesSection";
 import HeroSection from "../sections/HeroSection";
 import ScrollToTop from "../utils/ScrollToTop";
+import GallerySection from "../sections/GallerySection";
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <GallerySection />
       <Footer />
       <SubFooter />
     </>

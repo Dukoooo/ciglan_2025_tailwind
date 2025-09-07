@@ -49,7 +49,7 @@ function Navigation() {
             <Link to="/services">Služby</Link>
           </li>
           <li className="cursor-pointer hover:text-[#EDC543] transition-colors duration-300 border-b-2 pb-2 border-[#EDC543] md:border-none">
-            <Link>Galéria</Link>
+            <Link to="/gallery">Galéria</Link>
           </li>
 
           <span className="md:border-3 md:border-[#EDC543] pl-2 pr-4 flex justify-between items-center cursor-pointer group">

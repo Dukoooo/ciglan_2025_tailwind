@@ -13,7 +13,7 @@ function ButtonSmall({
     <a
       target="blank"
       href={href}
-      className="group pl-5 flex flex-row gap-1 items-center font-bold hover:underline"
+      className="group pl-0 flex flex-row gap-1 items-center font-bold hover:underline"
     >
       {children}
       <img src={imgSrc} alt="arrow" className={imgClassName} />
