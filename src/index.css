@@ -7,6 +7,11 @@ body {
   padding: 0;
 }
 
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
 .text-stroke-1 {
   -webkit-text-stroke: 1px rgb(64, 62, 62);
 }

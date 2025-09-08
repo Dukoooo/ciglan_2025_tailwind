@@ -4,7 +4,7 @@ import { LuMessageCircleMore } from "react-icons/lu";
 
 function Baner() {
   return (
-    <div className="  flex flex-col items-center justify-center min-h-[30vh] md:min-h-[33vh] xl:min-h-[45vh] 2xl:min-h-[40vh] w-[100%] bg-amber-400 mx-auto  w-screen ">
+    <div className="  flex flex-col items-center justify-center min-h-[30vh] md:min-h-[33vh] xl:min-h-[45vh] 2xl:min-h-[40vh]  bg-amber-400 mx-auto  w-screen ">
       <div className="w-[100%] mx-2 text-center mt-10 md:w-[95%] xl:w-[80%] 2xl:max-w-[60%] transform hover:scale-105 duration-350">
         <div className="relative top-[-70px] left-[41%] w-fit md:top-[-95px] md:left-[45%] 2xl:top-[-80px]">
           <img src={trippleBlack} alt="" className="w-20 " />

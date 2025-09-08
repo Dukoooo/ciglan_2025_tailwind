@@ -3,11 +3,22 @@ import { IoMdCloseCircle } from "react-icons/io";
 
 import LogoHorizontal from "../../assets/ciglan_logo_horizontal_transparent.png";
 import arrowSmall from "../../assets/arrows__Small.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isOpen]);
 
   function handleMenu() {
     setIsOpen(!isOpen);
@@ -52,8 +63,8 @@ function Navigation() {
             <Link to="/gallery">Galéria</Link>
           </li>
 
-          <span className="md:border-3 md:border-[#EDC543] pl-2 pr-4 flex justify-between items-center cursor-pointer group">
-            <li className="transition-colors duration-300 border-b-2 pb-2 border-[#EDC543] md:border-none md:py-1">
+          <span className="md:border-3 md:border-[#EDC543] px-2 py-2 flex justify-between items-center cursor-pointer group">
+            <li className="cursor-pointer hover:text-[#EDC543] transition-colors duration-300 border-b-2  pb-2 border-[#EDC543] md:border-none">
               <Link to="/contact">Kontakt</Link>
             </li>
             <img
