@@ -42,7 +42,7 @@ function Navigation() {
 
       <nav
         className={`z-50 overflow-hidden transition-[height] duration-500 ease-in-out
-          ${isOpen ? "h-[83%]" : "h-0"} md:h-auto
+          ${isOpen ? "h-[86%]" : "h-0"} md:h-auto
           absolute  top-30 md:left-0 xl:left-30 bg-black text-white w-full 
           md:w-[70%] lg:w-[60%] md:relative md:top-0 md:bg-transparent md:text-black font-[Roboto_Mono] `}
       >
@@ -63,14 +63,14 @@ function Navigation() {
             <Link to="/gallery">Galéria</Link>
           </li>
 
-          <span className="md:border-3 md:border-[#EDC543] px-2 py-2 flex justify-between items-center cursor-pointer group">
+          <span className="md:border-2 md:border-[#EDC543]  px-2 py-1 flex justify-between items-center rounded-xl mb-2 pt-3 cursor-pointer group">
             <li className="cursor-pointer hover:text-[#EDC543] transition-colors duration-300 border-b-2  pb-2 border-[#EDC543] md:border-none">
               <Link to="/contact">Kontakt</Link>
             </li>
             <img
               src={arrowSmall}
               alt="arrows"
-              className="hidden md:block pl-2 h-[100%] transform transition-transform duration-200 group-hover:translate-y-0.5"
+              className="hidden md:block pl-2 h-[100%] pb-2 transform transition-transform duration-200 group-hover:translate-y-0.5"
             />
           </span>
         </ul>

@@ -39,7 +39,7 @@ function AboutSection() {
           >
             <Link
               to="/about"
-              className=" flex w-[7rem] place-self-center bg-amber-400 px-4 py-2 rounded-md text-white mt-[2rem] md:mt-[3rem] cursor-pointer"
+              className=" flex w-[7rem] place-self-center bg-amber-400 px-4 py-2 rounded-md text-white mt-[2rem] md:mt-[3rem] cursor-pointer text-center items-center justify-center"
             >
               Viac o nás
             </Link>
