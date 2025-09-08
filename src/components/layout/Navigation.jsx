@@ -2,7 +2,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdCloseCircle } from "react-icons/io";
 
 import LogoHorizontal from "../../assets/ciglan_logo_horizontal_transparent.png";
-import arrowSmall from "../../assets/arrows__Small.png";
+import arrowSmall from "../../assets/arrows__small.png";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
